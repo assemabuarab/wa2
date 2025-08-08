@@ -1,757 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8" />
-  <title>الأسئلة الشائعة - واتساب الذهبي</title>
-  
-  <!-- Favicon -->
-  <link rel="icon" href="https://instagold.download/favicon.ico" type="image/x-icon">
-
-  <!-- Meta tags الأساسية -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-  <meta name="robots" content="index,follow"/>
-  <meta name="description" content="الأسئلة الشائعة حول تطبيق واتساب الذهبي والإجابة عليها"/>
-  <meta name="keywords" content="أسئلة واتساب الذهبي, استفسارات واتساب الذهبي, دعم واتساب الذهبي"/>
-
-  <!-- Open Graph (Facebook, WhatsApp, Telegram) -->
-  <meta property="og:type" content="website"/>
-  <meta property="og:site_name" content="GoldFire"/>
-  <meta property="og:locale" content="ar_AR"/>
-  <meta property="og:url" content="https://wa2.goldapk.app/faq.html"/>
-  <meta property="og:title" content="الأسئلة الشائعة - واتساب الذهبي"/>
-  <meta property="og:description" content="أجوبة على الأسئلة الأكثر شيوعاً حول تطبيق واتساب الذهبي"/>
-  <meta property="og:image" content="app_icon2.png"/>
-
-  <!-- الخطوط -->
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- أيقونات -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <style>
-    :root {
-      --gold-primary: #25D366;
-      --gold-secondary: #128C7E;
-      --gold-dark: #075E54;
-      --text-dark: #222;
-      --text-light: #f8f8f8;
-      --bg-light: #f9f9f9;
-      --shadow: 0 4px 12px rgba(0,0,0,0.08);
-      --transition: all 0.3s ease;
-    }
-    
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    body {
-      font-family: 'Tajawal', sans-serif;
-      font-weight: 500;
-      line-height: 1.7;
-      color: var(--text-dark);
-      background: linear-gradient(135deg, #e6ffed 0%, #fff 100%);
-      min-height: 100vh;
-      position: relative;
-    }
-    
-    [data-lang] { display: none; }
-    
-    /* شاشة التحميل */
-    #loader {
-      position: fixed;
-      inset: 0;
-      background: var(--bg-light);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
-      transition: opacity 0.5s ease;
-    }
-    
-    .loader-content {
-      text-align: center;
-      padding: 30px;
-      border-radius: 16px;
-      background: rgba(255, 255, 255, 0.9);
-      box-shadow: var(--shadow);
-    }
-    
-    .loader-logo {
-      width: 70px;
-      height: 70px;
-      margin-bottom: 15px;
-      animation: pulse 1.5s infinite;
-    }
-    
-    .loader-text {
-      font-size: 18px;
-      font-weight: 600;
-      color: var(--gold-dark);
-      margin-bottom: 15px;
-    }
-    
-    .loader-progress {
-      width: 100%;
-      height: 6px;
-      background: #e0e0e0;
-      border-radius: 4px;
-      overflow: hidden;
-      position: relative;
-    }
-    
-    .loader-progress-bar {
-      position: absolute;
-      left: 0;
-      top: 0;
-      height: 100%;
-      width: 0%;
-      background: linear-gradient(90deg, var(--gold-secondary), var(--gold-primary));
-      border-radius: 4px;
-      transition: width 0.5s ease;
-    }
-    
-    /* الشريط العلوي */
-    .top-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 12px 20px;
-      background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold-primary) 100%);
-      box-shadow: var(--shadow);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      color: white;
-      font-weight: 700;
-      font-size: 18px;
-      text-decoration: none;
-    }
-    
-    .logo-icon {
-      font-size: 20px;
-    }
-    
-    .lang-switcher {
-      display: flex;
-      gap: 8px;
-    }
-    
-    .lang-btn {
-      background: rgba(255, 255, 255, 0.2);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      color: white;
-      padding: 5px 12px;
-      border-radius: 30px;
-      font-weight: 600;
-      font-size: 14px;
-      cursor: pointer;
-      transition: var(--transition);
-    }
-    
-    .lang-btn:hover {
-      background: rgba(255, 255, 255, 0.3);
-    }
-    
-    /* الهيدر */
-    .header {
-      background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold-primary) 100%);
-      text-align: center;
-      padding: 30px 15px;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .header::before {
-      content: "";
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
-      transform: rotate(30deg);
-    }
-    
-    .header-content {
-      position: relative;
-      z-index: 2;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    
-    h1 {
-      font-size: 26px;
-      font-weight: 800;
-      margin-bottom: 8px;
-      color: white;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    }
-    
-    .subtitle {
-      font-size: 16px;
-      color: rgba(255, 255, 255, 0.9);
-      max-width: 600px;
-      margin: 0 auto 15px;
-    }
-    
-    /* المحتوى الرئيسي */
-    .main-content {
-      max-width: 1200px;
-      margin: -40px auto 30px;
-      padding: 0 15px;
-      position: relative;
-      z-index: 5;
-    }
-    
-    /* بطاقة الأسئلة الشائعة */
-    .faq-card {
-      background: white;
-      border-radius: 18px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      padding: 30px;
-      margin-bottom: 30px;
-    }
-    
-    .section-title {
-      font-size: 22px;
-      font-weight: 800;
-      color: var(--text-dark);
-      text-align: center;
-      margin-bottom: 25px;
-      position: relative;
-      padding-bottom: 12px;
-    }
-    
-    .section-title::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 70px;
-      height: 3px;
-      background: linear-gradient(90deg, var(--gold-secondary), var(--gold-primary));
-      border-radius: 2px;
-    }
-    
-    /* بنود الأسئلة */
-    .faq-container {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    
-    .faq-item {
-      border-bottom: 1px solid #eee;
-      padding: 18px 0;
-      transition: var(--transition);
-    }
-    
-    .faq-question {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      font-weight: 700;
-      font-size: 17px;
-      color: var(--gold-dark);
-      cursor: pointer;
-      padding: 10px 0;
-    }
-    
-    .faq-question i {
-      transition: var(--transition);
-      color: var(--gold-primary);
-    }
-    
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease;
-      color: #555;
-      line-height: 1.7;
-      padding-left: 20px;
-      border-left: 3px solid #eee;
-      margin: 8px 0;
-    }
-    
-    .faq-answer p {
-      margin-bottom: 10px;
-    }
-    
-    .faq-item.active .faq-question i {
-      transform: rotate(180deg);
-    }
-    
-    .faq-item.active .faq-answer {
-      max-height: 500px;
-    }
-    
-    /* الفوتر -->
-    .footer {
-      background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
-      color: #aaa;
-      padding: 40px 15px 25px;
-      margin-top: 40px;
-    }
-    
-    .footer-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 35px;
-    }
-    
-    @media (min-width: 768px) {
-      .footer-content {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-    
-    .footer-logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      color: white;
-      font-size: 22px;
-      font-weight: 700;
-      margin-bottom: 15px;
-    }
-    
-    .footer-desc {
-      font-size: 15px;
-      line-height: 1.7;
-      margin-bottom: 20px;
-    }
-    
-    .footer-links {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-      gap: 12px;
-      margin-top: 18px;
-    }
-    
-    .footer-links a {
-      text-decoration: none;
-      color: #aaa;
-      display: flex;
-      align-items: center;
-      gap: 7px;
-      transition: var(--transition);
-      font-size: 14px;
-    }
-    
-    .footer-links a:hover {
-      color: var(--gold-primary);
-    }
-    
-    .footer-section-title {
-      font-size: 18px;
-      font-weight: 700;
-      color: white;
-      margin-bottom: 20px;
-      position: relative;
-      padding-bottom: 8px;
-    }
-    
-    .footer-section-title::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 45px;
-      height: 3px;
-      background: var(--gold-primary);
-    }
-    
-    .copyright {
-      text-align: center;
-      padding-top: 25px;
-      margin-top: 25px;
-      border-top: 1px solid rgba(255,255,255,0.1);
-      font-size: 13px;
-      color: #777;
-    }
-    
-    .disclaimer {
-      font-size: 12px;
-      color: #777;
-      margin-top: 12px;
-      line-height: 1.7;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    
-    /* الرسوم المتحركة */
-    @keyframes pulse {
-      0% { transform: scale(0.95); opacity: 0.8; }
-      50% { transform: scale(1); opacity: 1; }
-      100% { transform: scale(0.95); opacity: 0.8; }
-    }
-    
-    @keyframes float {
-      0% { transform: translateY(0px); }
-      50% { transform: translateY(-8px); }
-      100% { transform: translateY(0px); }
-    }
-    
-    /* تحسينات للجوال */
-    @media (max-width: 480px) {
-      h1 {
-        font-size: 24px;
-      }
-      
-      .faq-question {
-        font-size: 16px;
-      }
-      
-      .section-title {
-        font-size: 20px;
-      }
-      
-      .footer-logo {
-        font-size: 20px;
-      }
-      
-      .footer-desc {
-        font-size: 14px;
-      }
-    }
-  </style>
-</head>
-
-<body>
-
-  <!-- شاشة التحميل -->
-  <div id="loader">
-    <div class="loader-content">
-      <img src="https://instagold.download/favicon.ico" alt="WhatsApp Gold" class="loader-logo">
-      <div class="loader-text" data-lang="ar">جاري تحميل الصفحة...</div>
-      <div class="loader-text" data-lang="en">Loading page...</div>
-      <div class="loader-progress">
-        <div class="loader-progress-bar" id="loaderBar"></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- الشريط العلوي -->
-  <div class="top-bar">
-    <a href="index.html" class="logo">
-      <i class="fab fa-whatsapp logo-icon"></i>
-      <span data-lang="ar">واتساب الذهبي</span>
-      <span data-lang="en">WhatsApp Gold</span>
-    </a>
-    
-    <div class="lang-switcher">
-      <button class="lang-btn" onclick="setLanguage('ar')">🇸🇦 عربي</button>
-      <button class="lang-btn" onclick="setLanguage('en')">🇺🇸 English</button>
-    </div>
-  </div>
-
-  <!-- الهيدر -->
-  <header class="header">
-    <div class="header-content">
-      <h1 data-lang="ar">الأسئلة الشائعة</h1>
-      <h1 data-lang="en">Frequently Asked Questions</h1>
-      
-      <p class="subtitle" data-lang="ar">أجوبة على الأسئلة الأكثر شيوعاً حول تطبيق واتساب الذهبي</p>
-      <p class="subtitle" data-lang="en">Answers to the most common questions about WhatsApp Gold</p>
-    </div>
-  </header>
-
-  <!-- المحتوى الرئيسي -->
-  <div class="main-content">
-    <!-- بطاقة الأسئلة الشائعة -->
-    <div class="faq-card">
-      <h2 class="section-title" data-lang="ar">أسئلة عامة</h2>
-      <h2 class="section-title" data-lang="en">General Questions</h2>
-      
-      <div class="faq-container">
-        <div class="faq-item">
-          <div class="faq-question" onclick="toggleFaq(this)">
-            <span data-lang="ar">ما هو واتساب الذهبي؟</span>
-            <span data-lang="en">What is WhatsApp Gold?</span>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="faq-answer">
-            <p data-lang="ar">واتساب الذهبي هو نسخة معدلة من تطبيق واتساب الرسمي مع إضافة العديد من الميزات غير الموجودة في النسخة الأصلية. يتيح لك هذه النسخة التحكم الكامل في تجربتك مع واتساب.</p>
-            <p data-lang="en">WhatsApp Gold is a modified version of the official WhatsApp application with many additional features not found in the original version. It gives you full control over your WhatsApp experience.</p>
-          </div>
-        </div>
-        
-        <div class="faq-item">
-          <div class="faq-question" onclick="toggleFaq(this)">
-            <span data-lang="ar">هل واتساب الذهبي آمن للاستخدام؟</span>
-            <span data-lang="en">Is WhatsApp Gold safe to use?</span>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="faq-answer">
-            <p data-lang="ar">نعم، واتساب الذهبي آمن تماماً للاستخدام. يتم فحص جميع الإصدارات للتأكد من خلوها من الفيروسات والبرمجيات الخبيثة. مع ذلك، ننصح بتنزيل التطبيق فقط من مصادرنا الرسمية.</p>
-            <p data-lang="en">Yes, WhatsApp Gold is completely safe to use. All versions are scanned to ensure they are free from viruses and malware. However, we recommend downloading the app only from our official sources.</p>
-          </div>
-        </div>
-        
-        <div class="faq-item">
-          <div class="faq-question" onclick="toggleFaq(this)">
-            <span data-lang="ar">هل سأتعرض للحظر من واتساب؟</span>
-            <span data-lang="en">Will I get banned from WhatsApp?</span>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="faq-answer">
-            <p data-lang="ar">تطبيقنا يحتوي على نظام حماية متقدم ضد الحظر. ومع ذلك، ننصح بعدم الإفراط في استخدام الميزات التي قد تثير الشكوك مثل إرسال الرسائل الجماعية بكثرة أو إرسال الرسائل إلى أرقام غير مسجلة.</p>
-            <p data-lang="en">Our app has an advanced protection system against bans. However, we advise against excessive use of features that may raise suspicions, such as sending mass messages frequently or messaging unregistered numbers.</p>
-          </div>
-        </div>
-        
-        <div class="faq-item">
-          <div class="faq-question" onclick="toggleFaq(this)">
-            <span data-lang="ar">هل أحتاج إلى روت لهاتفي لتثبيت التطبيق؟</span>
-            <span data-lang="en">Do I need to root my phone to install the app?</span>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="faq-answer">
-            <p data-lang="ar">لا، لا تحتاج إلى روت لهاتفك لتثبيت واتساب الذهبي. التطبيق يعمل على جميع الهواتف بدون متطلبات خاصة.</p>
-            <p data-lang="en">No, you do not need to root your phone to install WhatsApp Gold. The app works on all phones without special requirements.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- بطاقة الميزات والإعدادات -->
-    <div class="faq-card">
-      <h2 class="section-title" data-lang="ar">الميزات والإعدادات</h2>
-      <h2 class="section-title" data-lang="en">Features & Settings</h2>
-      
-      <div class="faq-container">
-        <div class="faq-item">
-          <div class="faq-question" onclick="toggleFaq(this)">
-            <span data-lang="ar">كيف يمكنني تنزيل حالات الآخرين؟</span>
-            <span data-lang="en">How can I download others' statuses?</span>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="faq-answer">
-            <p data-lang="ar">بمجرد فتح الحالة التي ترغب بحفظها، ستظهر أيقونة التنزيل في الزاوية العلوية. اضغط عليها لحفظ الحالة في معرض هاتفك.</p>
-            <p data-lang="en">Once you open the status you want to save, a download icon will appear in the top corner. Tap it to save the status to your phone gallery.</p>
-          </div>
-        </div>
-        
-        <div class="faq-item">
-          <div class="faq-question" onclick="toggleFaq(this)">
-            <span data-lang="ar">كيف أخفي ظهوري على الإنترنت؟</span>
-            <span data-lang="en">How do I hide my online status?</span>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="faq-answer">
-            <p data-lang="ar">اذهب إلى الإعدادات → إعدادات الخصوصية → وضع التخفي. من هناك يمكنك تفعيل خاصية إخفاء الحالة والظهور على الإنترنت.</p>
-            <p data-lang="en">Go to Settings → Privacy Settings → Stealth Mode. From there you can enable the feature to hide your online status.</p>
-          </div>
-        </div>
-        
-        <div class="faq-item">
-          <div class="faq-question" onclick="toggleFaq(this)">
-            <span data-lang="ar">هل يمكنني استخدام واتساب الذهبي مع واتساب الأصلي؟</span>
-            <span data-lang="en">Can I use WhatsApp Gold alongside the original WhatsApp?</span>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="faq-answer">
-            <p data-lang="ar">نعم، يمكنك استخدام التطبيقين معاً على نفس الهاتف. سيعملان بشكل منفصل باستخدام نفس الرقم أو أرقام مختلفة.</p>
-            <p data-lang="en">Yes, you can use both apps together on the same phone. They will work separately using the same number or different numbers.</p>
-          </div>
-        </div>
-        
-        <div class="faq-item">
-          <div class="faq-question" onclick="toggleFaq(this)">
-            <span data-lang="ar">كيف يمكنني استعادة الرسائل المحذوفة؟</span>
-            <span data-lang="en">How can I recover deleted messages?</span>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="faq-answer">
-            <p data-lang="ar">واتساب الذهبي يحفظ تلقائياً نسخة من جميع الرسائل. عندما يحذف شخص ما رسالة، اضغط مطولاً على مكان الرسالة المحذوفة واختر "استعادة".</p>
-            <p data-lang="en">WhatsApp Gold automatically saves a copy of all messages. When someone deletes a message, long-press on the deleted message space and select "Recover".</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- بطاقة التثبيت والمشاكل -->
-    <div class="faq-card">
-      <h2 class="section-title" data-lang="ar">التثبيت وحل المشاكل</h2>
-      <h2 class="section-title" data-lang="en">Installation & Troubleshooting</h2>
-      
-      <div class="faq-container">
-        <div class="faq-item">
-          <div class="faq-question" onclick="toggleFaq(this)">
-            <span data-lang="ar">لماذا لا يمكنني تثبيت التطبيق؟</span>
-            <span data-lang="en">Why can't I install the app?</span>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="faq-answer">
-            <p data-lang="ar">قد يكون السبب أنك لم تفعل خيار "التثبيت من مصادر غير معروفة" في إعدادات الأمان بهاتفك. تأكد من تفعيل هذا الخيار قبل تثبيت التطبيق.</p>
-            <p data-lang="en">The reason might be that you haven't enabled "Install from unknown sources" in your phone's security settings. Make sure to enable this option before installing the app.</p>
-          </div>
-        </div>
-        
-        <div class="faq-item">
-          <div class="faq-question" onclick="toggleFaq(this)">
-            <span data-lang="ar">كيف أنقل محادثاتي من واتساب العادي إلى الذهبي؟</span>
-            <span data-lang="en">How do I transfer my chats from regular WhatsApp to Gold?</span>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="faq-answer">
-            <p data-lang="ar">1. في واتساب العادي: الإعدادات → الدردشات → نسخ احتياطي للدردشات<br>
-            2. قم بتثبيت واتساب الذهبي وافتحه<br>
-            3. أثناء عملية الإعداد، سيطلب منك استعادة النسخة الاحتياطية</p>
-            <p data-lang="en">1. In regular WhatsApp: Settings → Chats → Chat backup<br>
-            2. Install WhatsApp Gold and open it<br>
-            3. During setup, it will prompt you to restore the backup</p>
-          </div>
-        </div>
-        
-        <div class="faq-item">
-          <div class="faq-question" onclick="toggleFaq(this)">
-            <span data-lang="ar">التطبيق لا يتصل بالإنترنت، ما الحل؟</span>
-            <span data-lang="en">The app isn't connecting to the internet, what should I do?</span>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="faq-answer">
-            <p data-lang="ar">1. تأكد من اتصال هاتفك بالإنترنت<br>
-            2. اذهب إلى إعدادات التطبيق → الأذونات → تأكد من تفعيل إذن الإنترنت<br>
-            3. أعد تشغيل التطبيق<br>
-            4. إذا استمرت المشكلة، أعد تثبيت التطبيق</p>
-            <p data-lang="en">1. Make sure your phone is connected to the internet<br>
-            2. Go to app settings → Permissions → Ensure internet permission is enabled<br>
-            3. Restart the app<br>
-            4. If the problem persists, reinstall the app</p>
-          </div>
-        </div>
-        
-        <div class="faq-item">
-          <div class="faq-question" onclick="toggleFaq(this)">
-            <span data-lang="ar">كيف أحصل على التحديثات الجديدة؟</span>
-            <span data-lang="en">How do I get new updates?</span>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="faq-answer">
-            <p data-lang="ar">سنقوم بإعلامك عبر قناتنا على التليجرام عند توفر تحديث جديد. يمكنك أيضاً تفعيل الإشعارات في التطبيق ليتم تنبيهك عند توفر تحديث.</p>
-            <p data-lang="en">We will notify you through our Telegram channel when a new update is available. You can also enable notifications in the app to be alerted when an update is available.</p>
-          </div>
-        </div>
-        
-        <div class="faq-item">
-          <div class="faq-question" onclick="toggleFaq(this)">
-            <span data-lang="ar">لماذا لا تظهر الميزات المتقدمة؟</span>
-            <span data-lang="en">Why don't the advanced features appear?</span>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="faq-answer">
-            <p data-lang="ar">بعض الميزات تحتاج إلى تفعيل يدوي. اذهب إلى الإعدادات → ميزات واتساب الذهبي → وقم بتفعيل الميزات التي ترغب باستخدامها. تأكد أيضاً من أنك تستخدم أحدث نسخة.</p>
-            <p data-lang="en">Some features need to be manually enabled. Go to Settings → WhatsApp Gold Features → and enable the features you want to use. Also make sure you are using the latest version.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- الفوتر -->
-  <footer class="footer">
-    <div class="footer-content">
-      <div>
-        <div class="footer-logo">
-          <i class="fab fa-whatsapp"></i>
-          <span data-lang="ar">واتساب الذهبي</span>
-          <span data-lang="en">WhatsApp Gold</span>
-        </div>
-        
-        <p class="footer-desc" data-lang="ar">
-          نسخة محسنة من تطبيق واتساب مع ميزات فريدة غير موجودة في التطبيق الرسمي.
-          نسعى لتقديم أفضل تجربة مستخدم مع الحفاظ على الأمان والخصوصية.
-        </p>
-        <p class="footer-desc" data-lang="en">
-          An enhanced version of the WhatsApp app with unique features not available in the official app.
-          We strive to provide the best user experience while maintaining security and privacy.
-        </p>
-        
-        <div class="footer-links">
-          <a href="privacy-policy.html"><i class="fas fa-shield-alt"></i> <span data-lang="ar">الأمان والخصوصية</span><span data-lang="en">Security & Privacy</span></a>
-          <a href="faq.html" class="active"><i class="fas fa-question-circle"></i> <span data-lang="ar">الأسئلة الشائعة</span><span data-lang="en">FAQ</span></a>
-          <a href="terms.html"><i class="fas fa-book"></i> <span data-lang="ar">الشروط والأحكام</span><span data-lang="en">Terms & Conditions</span></a>
-          <a href="contact.html"><i class="fas fa-envelope"></i> <span data-lang="ar">اتصل بنا</span><span data-lang="en">Contact Us</span></a>
-        </div>
-      </div>
-      
-      <div>
-        <h3 class="footer-section-title" data-lang="ar">روابط مفيدة</h3>
-        <h3 class="footer-section-title" data-lang="en">Useful Links</h3>
-        
-        <div class="footer-links">
-          <a href="https://t.me/AssemBlogger"><i class="fab fa-telegram"></i> <span data-lang="ar">قناة التليجرام</span><span data-lang="en">Telegram Channel</span></a>
-          <a href="guide.html"><i class="fab fa-youtube"></i> <span data-lang="ar">دليل الاستخدام</span><span data-lang="en">User Guide</span></a>
-          <a href="versions.html"><i class="fas fa-history"></i> <span data-lang="ar">الإصدارات السابقة</span><span data-lang="en">Previous Versions</span></a>
-          <a href="https://mediafiresm.appsfire.co/file/goldhelper"><i class="fas fa-mobile-alt"></i> <span data-lang="ar">تطبيقات أخرى</span><span data-lang="en">Other Apps</span></a>
-        </div>
-      </div>
-    </div>
-    
-    <div class="copyright">
-      <p>&copy; 2025 WhatsApp Gold. <span data-lang="ar">جميع الحقوق محفوظة</span><span data-lang="en">All rights reserved</span></p>
-      <p class="disclaimer" data-lang="ar">
-        نحن لا نستضيف أي ملف على خوادمنا. جميع الروابط يتم توجيهها من مصادر خارجية موثوقة.
-        هذا التطبيق ليس تابعًا لشركة واتساب أو فيسبوك.
-      </p>
-      <p class="disclaimer" data-lang="en">
-        We do not host any files on our servers. All links are redirected from trusted external sources.
-        This app is not affiliated with WhatsApp or Facebook.
-      </p>
-    </div>
-  </footer>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      // محاكاة تقدم التحميل
-      let progress = 0;
-      const progressBar = document.getElementById('loaderBar');
-      const progressInterval = setInterval(() => {
-        progress += Math.random() * 10;
-        progressBar.style.width = `${progress}%`;
-        
-        if (progress >= 100) {
-          clearInterval(progressInterval);
-          document.getElementById('loader').style.opacity = '0';
-          setTimeout(() => {
-            document.getElementById('loader').style.display = 'none';
-          }, 500);
-        }
-      }, 100);
-      
-      // تعيين اللغة التلقائي
-      const userLang = navigator.language.startsWith("ar") ? "ar" : "en";
-      setLanguage(userLang);
-    });
-
-    let lang = 'ar';
-    function setLanguage(selectedLang) {
-      lang = selectedLang;
-      document.querySelectorAll('[data-lang]').forEach(el => {
-        el.style.display = el.dataset.lang === lang ? 'block' : 'none';
-      });
-      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-      document.documentElement.lang = lang;
-    }
-
-    function toggleFaq(element) {
-      const faqItem = element.parentElement;
-      faqItem.classList.toggle('active');
-    }
-  </script>
-</body>
-</html>
