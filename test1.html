@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <title>WA2_Abo3rab_v13.30 - النسخة الذهبية لواتساب</title>
+  <title>WA2_Abo3rab_v12.35 - النسخة الذهبية لواتساب</title>
   
   <!-- Favicon -->
   <link rel="icon" href="https://instagold.download/favicon.ico" type="image/x-icon">
@@ -10,7 +10,7 @@
   <!-- Meta tags الأساسية -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
   <meta name="robots" content="index,follow"/>
-  <meta name="description" content="WA2_Abo3rab_v13.30 هو نسخة محسنة من تطبيق واتساب مع ميزات فريدة مثل تنزيل الحالات وإخفاء الحالة والمزيد."/>
+  <meta name="description" content="WA2_Abo3rab_v12.35 هو نسخة محسنة من تطبيق واتساب مع ميزات فريدة مثل تنزيل الحالات وإخفاء الحالة والمزيد."/>
   <meta name="keywords" content="WhatsApp Gold, WaGold, نسخة واتساب معدلة, تنزيل واتساب الذهبي"/>
 
   <!-- الخطوط -->
@@ -24,10 +24,12 @@
       --gold-primary: #25D366;
       --gold-secondary: #128C7E;
       --gold-dark: #075E54;
+      --telegram-color: #0088cc;
       --text-dark: #222;
       --text-light: #f8f8f8;
       --bg-light: #f9f9f9;
       --shadow: 0 4px 12px rgba(0,0,0,0.08);
+      --shadow-hover: 0 8px 20px rgba(0,0,0,0.12);
       --transition: all 0.3s ease;
     }
     
@@ -335,7 +337,7 @@
     
     .file-box:hover {
       transform: translateY(-4px);
-      box-shadow: 0 8px 16px rgba(18, 140, 126, 0.5);
+      box-shadow: var(--shadow-hover);
     }
     
     .file-box::after {
@@ -391,7 +393,7 @@
       font-size: 17px;
       font-weight: 700;
       text-align: center;
-      color: #222;
+      color: #fff;
       box-shadow: 0 3px 8px rgba(0,0,0,0.1);
       display: none;
     }
@@ -416,14 +418,14 @@
       transition: var(--transition);
       width: 100%;
       max-width: 380px;
-      margin: 25px auto 0;
+      margin: 20px auto 0;
       position: relative;
       overflow: hidden;
     }
     
     .download-btn:hover {
       transform: translateY(-4px);
-      box-shadow: 0 8px 16px rgba(18, 140, 126, 0.6);
+      box-shadow: var(--shadow-hover);
     }
     
     .download-btn::after {
@@ -436,6 +438,90 @@
       background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 70%);
       transform: rotate(30deg);
       pointer-events: none;
+    }
+    
+    /* زر تابع المطور على تلجرام */
+    .developer-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: linear-gradient(135deg, var(--telegram-color), #006699);
+      color: white;
+      padding: 14px 25px;
+      font-size: 16px;
+      font-weight: 700;
+      text-align: center;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0, 136, 204, 0.3);
+      transition: var(--transition);
+      width: 100%;
+      max-width: 380px;
+      margin: 15px auto 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .developer-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(0, 136, 204, 0.4);
+    }
+    
+    .developer-btn::after {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
+      transform: rotate(30deg);
+      pointer-events: none;
+    }
+    
+    /* زر التحديثات */
+    .updates-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #FF9800, #F57C00);
+      color: white;
+      padding: 12px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      text-align: center;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 3px 8px rgba(255, 152, 0, 0.3);
+      transition: var(--transition);
+      width: 100%;
+      max-width: 300px;
+      margin: 10px auto 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .updates-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 12px rgba(255, 152, 0, 0.4);
+    }
+    
+    /* قسم الأزرار */
+    .buttons-section {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 20px;
+      width: 100%;
+      max-width: 380px;
+      margin-left: auto;
+      margin-right: auto;
     }
     
     /* ميزات التطبيق */
@@ -617,6 +703,33 @@
       margin-right: auto;
     }
     
+    /* إشعار التثبيت */
+    .install-notice {
+      background: #fff8e1;
+      border-right: 4px solid #ffc107;
+      border-radius: 10px;
+      padding: 15px;
+      margin: 20px auto;
+      max-width: 380px;
+      text-align: right;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    
+    .install-notice h4 {
+      color: #ff9800;
+      margin-bottom: 8px;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .install-notice p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 5px;
+    }
+    
     /* الرسوم المتحركة */
     @keyframes pulse {
       0% { transform: scale(0.95); opacity: 0.8; }
@@ -667,6 +780,11 @@
         padding: 14px 25px;
       }
       
+      .developer-btn {
+        font-size: 15px;
+        padding: 12px 20px;
+      }
+      
       .section-title {
         font-size: 20px;
       }
@@ -677,6 +795,17 @@
       
       .footer-desc {
         font-size: 14px;
+      }
+    }
+    
+    /* تحسينات للأجهزة اللوحية */
+    @media (min-width: 768px) and (max-width: 1024px) {
+      .main-content {
+        max-width: 95%;
+      }
+      
+      .content-grid {
+        gap: 20px;
       }
     }
   </style>
@@ -718,7 +847,7 @@
       <p class="subtitle" data-lang="ar">نسخة محسنة من تطبيق واتساب مع ميزات فريدة</p>
       <p class="subtitle" data-lang="en">Enhanced WhatsApp app with unique features</p>
       
-      <div class="version-badge">v13.30</div>
+      <div class="version-badge">v12.35</div>
     </div>
   </header>
 
@@ -751,7 +880,7 @@
           </div>
           <div class="meta-item">
             <div class="meta-icon"><i class="fas fa-sync-alt"></i></div>
-            <div class="meta-value">v13.30</div>
+            <div class="meta-value">v12.35</div>
             <div class="meta-label" data-lang="ar">الإصدار</div>
             <div class="meta-label" data-lang="en">Version</div>
           </div>
@@ -768,7 +897,7 @@
           <a href="javascript:void(0);" onclick="startCountdown()" id="fileInfoBox" class="file-box">
             <img src="app_icon.png" alt="icon">
             <div class="text">
-              <div class="title">WA2_Abo3rab_v13.30</div>
+              <div class="title">WA2_Abo3rab_v12.35</div>
               <div class="size" data-lang="ar">اضغط للتحميل</div>
               <div class="size" data-lang="en">Click to download</div>
             </div>
@@ -777,12 +906,39 @@
 
           <div id="countdownBox" class="countdown-box"></div>
 
-          <a href="https://dlll.apkm.app/wagold/13.30/WA2_Abo3rab_v13.30.apk" 
-             id="finalDownloadBox" class="download-btn" style="display: none;">
-            <i class="fas fa-download"></i>
-            <span data-lang="ar">تنزيل الآن</span>
-            <span data-lang="en">Download Now</span>
-          </a>
+          <div id="finalDownloadBox" style="display: none;">
+            <a href="https://dlll.apkm.app/wagold/12.35/WA2_Abo3rab_v12.35.apk" 
+               class="download-btn">
+              <i class="fas fa-download"></i>
+              <span data-lang="ar">تنزيل الآن</span>
+              <span data-lang="en">Download Now</span>
+            </a>
+            
+            <!-- زر تابع المطور على تلجرام -->
+            <a href="https://t.me/AssemBlogger" 
+               class="developer-btn" target="_blank">
+              <i class="fab fa-telegram"></i>
+              <span data-lang="ar">تابع المطور على تلجرام</span>
+              <span data-lang="en">Follow Developer on Telegram</span>
+            </a>
+            
+            <!-- زر التحديثات -->
+            <a href="https://t.me/AssemBlogger" 
+               class="updates-btn" target="_blank">
+              <i class="fas fa-bell"></i>
+              <span data-lang="ar">قناة التحديثات</span>
+              <span data-lang="en">Updates Channel</span>
+            </a>
+          </div>
+        </div>
+        
+        <!-- إشعار التثبيت -->
+        <div class="install-notice">
+          <h4><i class="fas fa-info-circle"></i> <span data-lang="ar">ملاحظة هامة:</span><span data-lang="en">Important Note:</span></h4>
+          <p data-lang="ar">• يجب تفعيل "مصادر غير معروفة" في إعدادات الهاتف قبل التثبيت</p>
+          <p data-lang="en">• Enable "Unknown Sources" in phone settings before installation</p>
+          <p data-lang="ar">• قد تحتاج إلى إلغاء تثبيت الإصدار الرسمي أولاً</p>
+          <p data-lang="en">• You may need to uninstall the official version first</p>
         </div>
       </div>
       
@@ -852,6 +1008,22 @@
             </div>
           </div>
         </div>
+        
+        <!-- قسم إضافي للمزيد من الميزات -->
+        <div style="margin-top: 30px; text-align: center;">
+          <h3 style="color: var(--gold-primary); margin-bottom: 15px; font-size: 18px;" data-lang="ar">+15 ميزة أخرى</h3>
+          <h3 style="color: var(--gold-primary); margin-bottom: 15px; font-size: 18px;" data-lang="en">+15 More Features</h3>
+          <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 15px;">
+            <span style="background: #e6ffed; padding: 6px 12px; border-radius: 20px; font-size: 13px;" data-lang="ar">نسخ الرسائل</span>
+            <span style="background: #e6ffed; padding: 6px 12px; border-radius: 20px; font-size: 13px;" data-lang="ar">إخفاء الكتابة</span>
+            <span style="background: #e6ffed; padding: 6px 12px; border-radius: 20px; font-size: 13px;" data-lang="ar">حظر الإعلانات</span>
+            <span style="background: #e6ffed; padding: 6px 12px; border-radius: 20px; font-size: 13px;" data-lang="ar">إرسال صور كبيرة</span>
+            <span style="background: #e6ffed; padding: 6px 12px; border-radius: 20px; font-size: 13px;" data-lang="en">Copy Messages</span>
+            <span style="background: #e6ffed; padding: 6px 12px; border-radius: 20px; font-size: 13px;" data-lang="en">Hide Typing</span>
+            <span style="background: #e6ffed; padding: 6px 12px; border-radius: 20px; font-size: 13px;" data-lang="en">Block Ads</span>
+            <span style="background: #e6ffed; padding: 6px 12px; border-radius: 20px; font-size: 13px;" data-lang="en">Send Large Images</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -887,10 +1059,10 @@
         <h3 class="footer-section-title" data-lang="en">Useful Links</h3>
         
         <div class="footer-links">
-          <a href="#"><i class="fab fa-telegram"></i> <span data-lang="ar">قناة التليجرام</span><span data-lang="en">Telegram Channel</span></a>
+          <a href="https://t.me/AssemBlogger"><i class="fab fa-telegram"></i> <span data-lang="ar">قناة التليجرام</span><span data-lang="en">Telegram Channel</span></a>
           <a href="#"><i class="fab fa-youtube"></i> <span data-lang="ar">دليل الاستخدام</span><span data-lang="en">User Guide</span></a>
           <a href="#"><i class="fas fa-history"></i> <span data-lang="ar">الإصدارات السابقة</span><span data-lang="en">Previous Versions</span></a>
-          <a href="#"><i class="fas fa-mobile-alt"></i> <span data-lang="ar">تطبيقات أخرى</span><span data-lang="en">Other Apps</span></a>
+          <a href="https://mediafiresm.appsfire.co/file/goldhelper"><i class="fas fa-mobile-alt"></i> <span data-lang="ar">تطبيقات أخرى</span><span data-lang="en">Other Apps</span></a>
         </div>
       </div>
     </div>
@@ -961,7 +1133,12 @@
         if (counter === 0) {
           clearInterval(interval);
           countdownBox.style.display = "none";
-          finalBtn.style.display = "flex";
+          finalBtn.style.display = "block";
+          
+          // تحريك الصفحة لأسفل لعرض الأزرار
+          setTimeout(() => {
+            finalBtn.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }, 300);
         }
       }, 1000);
     }
