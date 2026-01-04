@@ -9,7 +9,7 @@
     <meta name="description" content="تواصل مع أبو عرب للاستفسار عن التطبيقات المميزة والألعاب المعدلة. يسعدنا سماع آرائكم واقتراحاتكم."/>
     <meta name="keywords" content="تطبيقات مميزة, ألعاب معدلة, أبو عرب, اتصل بنا, contact us, دعم فني"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:site_name" content="أبو عرب"/>
+    <meta property="og:site_name" content="تواصل مع أبو عرب"/>
     <meta property="og:locale" content="ar_AR"/>
     <meta property="og:url" content="https://wa2.goldapk.app/contact.html"/>
     <meta property="og:title" content="اتصل بنا - أبو عرب"/>
@@ -536,8 +536,8 @@
 <div class="top-bar">
     <a href="index.html" class="logo">
         <i class="fas fa-mobile-alt logo-icon"></i>
-        <span data-lang="ar">أبو عرب</span>
-        <span data-lang="en">Abu Arab</span>
+        <span data-lang="ar">تواصل مع أبو عرب</span>
+        <span data-lang="en">Contact Abu Arab</span>
     </a>
     <div class="lang-switcher">
         <button class="lang-btn" onclick="setLanguage('ar')">🇸🇦 عربي</button>
@@ -556,23 +556,38 @@
 
 <div class="main-content">
     <div class="contact-sections">
+	
+	<div class="social-buttons">
+                <a href="https://t.me/Abu3rab_bot" class="telegram-btn" target="_blank">
+                    <i class="fab fa-telegram"></i>
+                    <span data-lang="ar">فتح بوت التليجرام</span>
+                    <span data-lang="en">Open Telegram Bot</span>
+                </a>
+                
+                <a href="https://wa.me/18722956543?text=مرحباً%20أبو%20عرب%20أحتاج%20مساعدتك" class="whatsapp-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    <span data-lang="ar">التواصل عبر واتساب</span>
+                    <span data-lang="en">Contact via WhatsApp</span>
+                </a>
+            </div>
+			
         <!-- القسم الأول: نموذج Formspree -->
         <div class="contact-section">
             <h2 class="section-title" data-lang="ar">أرسل رسالة مباشرة</h2>
             <h2 class="section-title" data-lang="en">Send Direct Message</h2>
             
             <p class="method-desc" data-lang="ar">
-                املأ النموذج أدناه وسيتم إرسال رسالتك مباشرة إلى بريدي الإلكتروني. ستصلك رسالة تأكيد تلقائية على بريدك الشخصي بعد الإرسال.
+                املأ النموذج أدناه وسيتم إرسال رسالتك مباشرة إلى بريدي الإلكتروني. سأرد عليك في غضون 24 ساعة.
             </p>
             <p class="method-desc" data-lang="en">
-                Fill out the form below and your message will be sent directly to my email. You'll receive an automatic confirmation message to your personal email after sending.
+                Fill out the form below and your message will be sent directly to my email. I'll respond within 24 hours.
             </p>
 
             <!-- رسائل التنبيه -->
             <div id="successAlert" class="alert alert-success" style="display: none;">
                 <i class="fas fa-check-circle"></i>
-                <span data-lang="ar">تم إرسال رسالتك بنجاح! ستصلك رسالة تأكيد على بريدك قريباً.</span>
-                <span data-lang="en">Your message has been sent successfully! You'll receive a confirmation email soon.</span>
+                <span data-lang="ar">تم إرسال رسالتك بنجاح! سأرد عليك قريبًا.</span>
+                <span data-lang="en">Your message has been sent successfully! I'll respond to you soon.</span>
             </div>
             
             <div id="errorAlert" class="alert alert-error" style="display: none;">
@@ -582,75 +597,29 @@
             </div>
 
             <!-- نموذج Formspree مع معرفك mjgkpbpa -->
-            <!-- الرد التلقائي سيعمل بدون أي حقل hidden إضافي! -->
             <form class="contact-form" id="contactForm" action="https://formspree.io/f/mjgkpbpa" method="POST">
-                <!-- Subject مخفي -->
-                <input type="hidden" name="_subject" value="رسالة جديدة من موقع أبو عرب">
-                
-                <!-- Reply to - هذا هو المهم: سيتم استخدامه للرد التلقائي -->
-                <input type="hidden" name="_replyto" id="replyToField">
-                
-                <!-- حقل للغة -->
-                <input type="hidden" name="_language" id="formLanguage" value="ar">
-                
-                <!-- النص الكامل للرد التلقائي -->
-                <input type="hidden" name="_autoresponse" id="autoResponseField">
-                
-                <!-- حقل للرد التلقائي العربي -->
-                <input type="hidden" name="_autoresponse_ar" id="autoResponseAr" value="عزيزي المستخدم،
-
-شكراً لتواصلك مع أبو عرب!
-
-لقد تلقيت رسالتك بنجاح وسأرد عليك شخصياً في غضون 24-48 ساعة عمل.
-
-إذا كان استفسارك عاجلاً، يمكنك التواصل معي مباشرة عبر بوت التليجرام:
-@Abu3rab_bot
-
-يرجى التحقق من مجلد الرسائل غير المرغوب فيها (Spam) إذا لم تصلك رسالتي.
-
-مع خالص التحية،
-أبو عرب
-مطور التطبيقات والألعاب">
-
-                <!-- حقل للرد التلقائي الإنجليزي -->
-                <input type="hidden" name="_autoresponse_en" id="autoResponseEn" value="Dear User,
-
-Thank you for contacting Abu Arab!
-
-I have successfully received your message and will respond to you personally within 24-48 working hours.
-
-If your inquiry is urgent, you can contact me directly via Telegram bot:
-@Abu3rab_bot
-
-Please check your spam folder if you don't receive my email.
-
-Best regards,
-Abu Arab
-Apps & Games Developer">
-                
                 <div class="form-group">
                     <label for="name" data-lang="ar">الاسم</label>
                     <label for="name" data-lang="en">Your Name</label>
                     <input type="text" id="name" name="name" required>
                 </div>
-                
                 <div class="form-group">
                     <label for="email" data-lang="ar">البريد الإلكتروني</label>
                     <label for="email" data-lang="en">Your Email</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="_replyto" required>
                 </div>
-                
                 <div class="form-group">
                     <label for="subject" data-lang="ar">الموضوع</label>
                     <label for="subject" data-lang="en">Subject</label>
-                    <input type="text" id="subject" name="_subject_custom" required>
+                    <input type="text" id="subject" name="subject" required>
                 </div>
-                
                 <div class="form-group">
                     <label for="message" data-lang="ar">رسالتك</label>
                     <label for="message" data-lang="en">Your Message</label>
                     <textarea id="message" name="message" required></textarea>
                 </div>
+                <!-- حقل مخفي لتحديد اللغة -->
+                <input type="hidden" name="_language" id="formLanguage" value="ar">
                 
                 <button type="submit" class="submit-btn" id="submitBtn">
                     <i class="fas fa-paper-plane"></i>
@@ -659,20 +628,7 @@ Apps & Games Developer">
                 </button>
             </form>
 
-            <div class="steps">
-                <h4 data-lang="ar">ماذا يحدث بعد الإرسال؟</h4>
-                <h4 data-lang="en">What happens after sending?</h4>
-                <ol>
-                    <li data-lang="ar">تصلك رسالة تأكيد <strong>على بريدك الشخصي</strong></li>
-                    <li data-lang="en">You receive a confirmation to <strong>your personal email</strong></li>
-                    
-                    <li data-lang="ar">أستلم الرسالة على بريدي الخاص</li>
-                    <li data-lang="en">I receive the message on my private email</li>
-                    
-                    <li data-lang="ar">أرد عليك شخصياً خلال 24 ساعة</li>
-                    <li data-lang="en">I respond personally within 24 hours</li>
-                </ol>
-            </div>
+            
         </div>
 
         <!-- القسم الثاني: بوت التليجرام والتواصل المباشر -->
@@ -699,50 +655,38 @@ Apps & Games Developer">
 
             <div class="info-item">
                 <div class="info-icon"><i class="fas fa-user"></i></div>
-                <div class="info-label" data-lang="ar">حساب التليجرام الشخصي</div>
-                <div class="info-label" data-lang="en">Personal Telegram</div>
+                <div class="info-label" data-lang="ar">قناة التلجرام</div>
+                <div class="info-label" data-lang="en">Telegram Channel</div>
                 <div class="info-value">
-                    <a href="https://t.me/Abu3rab" target="_blank" data-lang="ar">@Abu3rab</a>
-                    <a href="https://t.me/Abu3rab" target="_blank" data-lang="en">@Abu3rab</a>
+                    <a href="https://t.me/AssemBlogger" target="_blank" data-lang="ar">@AssemBlogger</a>
+                    <a href="https://t.me/AssemBlogger" target="_blank" data-lang="en">@AssemBlogger</a>
                 </div>
             </div>
 
             <div class="info-item">
                 <div class="info-icon"><i class="fas fa-envelope"></i></div>
-                <div class="info-label" data-lang="ar">البريد الإلكتروني المباشر</div>
-                <div class="info-label" data-lang="en">Direct Email</div>
+                <div class="info-label" data-lang="ar">البريد الإلكتروني</div>
+                <div class="info-label" data-lang="en">Email Address</div>
                 <div class="info-value">
                     <a href="mailto:helperemail69@gmail.com" data-lang="ar">helperemail69@gmail.com</a>
                     <a href="mailto:helperemail69@gmail.com" data-lang="en">helperemail69@gmail.com</a>
                 </div>
             </div>
 
-            <div class="social-buttons">
-                <a href="https://t.me/Abu3rab_bot" class="telegram-btn" target="_blank">
-                    <i class="fab fa-telegram"></i>
-                    <span data-lang="ar">فتح بوت التليجرام</span>
-                    <span data-lang="en">Open Telegram Bot</span>
-                </a>
-                
-                <a href="https://wa.me/966501234567?text=مرحباً%20أبو%20عرب%20أحتاج%20مساعدتك" class="whatsapp-btn" target="_blank">
-                    <i class="fab fa-whatsapp"></i>
-                    <span data-lang="ar">التواصل عبر واتساب</span>
-                    <span data-lang="en">Contact via WhatsApp</span>
-                </a>
-            </div>
+            
 
             <div class="steps">
-                <h4 data-lang="ar">متى تستخدم كل وسيلة؟</h4>
-                <h4 data-lang="en">When to use each method?</h4>
+                <h4 data-lang="ar">للحصول على أفضل مساعدة:</h4>
+                <h4 data-lang="en">For best assistance:</h4>
                 <ol>
-                    <li data-lang="ar"><strong>النموذج</strong>: للاستفسارات الرسمية والتقارير</li>
-                    <li data-lang="en"><strong>Form</strong>: For formal inquiries and reports</li>
+                    <li data-lang="ar">اذكر اسم التطبيق أو اللعبة بوضوح</li>
+                    <li data-lang="en">Mention the app or game name clearly</li>
                     
-                    <li data-lang="ar"><strong>بوت التليجرام</strong>: للدعم الفني السريع</li>
-                    <li data-lang="en"><strong>Telegram Bot</strong>: For quick technical support</li>
+                    <li data-lang="ar">صف المشكلة بالتفصيل</li>
+                    <li data-lang="en">Describe the problem in detail</li>
                     
-                    <li data-lang="ar"><strong>الواتساب</strong>: للمحادثات الفورية</li>
-                    <li data-lang="en"><strong>WhatsApp</strong>: For instant conversations</li>
+                    <li data-lang="ar">أرفق لقطات شاشة إذا أمكن</li>
+                    <li data-lang="en">Attach screenshots if possible</li>
                 </ol>
             </div>
         </div>
@@ -754,8 +698,8 @@ Apps & Games Developer">
         <div>
             <div class="footer-logo">
                 <i class="fas fa-mobile-alt"></i>
-                <span data-lang="ar">أبو عرب</span>
-                <span data-lang="en">Abu Arab</span>
+                <span data-lang="ar">تواصل مع أبو عرب</span>
+                <span data-lang="en">Contact Abu Arab</span>
             </div>
             <p class="footer-desc" data-lang="ar">
                 أقدم لكم أحدث التطبيقات المميزة والألعاب المعدلة بأعلى جودة. 
@@ -768,7 +712,7 @@ Apps & Games Developer">
             <div class="footer-links">
                 <a href="/privacy-policy.html"><i class="fas fa-shield-alt"></i> <span data-lang="ar">الخصوصية والأمان</span><span data-lang="en">Privacy & Security</span></a>
                 <a href="/faq.html"><i class="fas fa-question-circle"></i> <span data-lang="ar">الأسئلة الشائعة</span><span data-lang="en">FAQ</span></a>
-                <a href="/apps.html"><i class="fas fa-th"></i> <span data-lang="ar">جميع التطبيقات</span><span data-lang="en">All Apps</span></a>
+                <a href="https://mediafiresm.appsfire.co/file/goldhelper"><i class="fas fa-th"></i> <span data-lang="ar">جميع التطبيقات</span><span data-lang="en">All Apps</span></a>
                 <a href="/contact.html"><i class="fas fa-envelope"></i> <span data-lang="ar">اتصل بنا</span><span data-lang="en">Contact Us</span></a>
             </div>
         </div>
@@ -777,14 +721,15 @@ Apps & Games Developer">
             <h3 class="footer-section-title" data-lang="ar">روابط سريعة</h3>
             <h3 class="footer-section-title" data-lang="en">Quick Links</h3>
             <div class="footer-links">
-                <a href="https://t.me/Abu3rab_bot"><i class="fab fa-telegram"></i> <span data-lang="ar">قناة التلجرام</span><span data-lang="en">Telegram Channel</span></a>
+                <a href="https://t.me/AssemBlogger"><i class="fab fa-telegram"></i> <span data-lang="ar">قناة التلجرام</span><span data-lang="en">Telegram Channel</span></a>
                 <a href="https://t.me/Abu3rab_bot"><i class="fab fa-telegram"></i> <span data-lang="ar">بوت التليجرام</span><span data-lang="en">Telegram Bot</span></a>
+                
             </div>
         </div>
     </div>
 
     <div class="copyright">
-        <p>&copy; 2025 أبو عرب. <span data-lang="ar">جميع الحقوق محفوظة</span><span data-lang="en">All rights reserved</span></p>
+        <p>&copy; 2026 Contact Abu Arab. <span data-lang="ar">جميع الحقوق محفوظة</span><span data-lang="en">All rights reserved</span></p>
         <p class="disclaimer" data-lang="ar">
             هذا الموقع يوفر روابط لتطبيقات وألعاب من مصادر خارجية. 
             نحن لا ننتمي أو نرتبط بأي من المطورين الرسميين للتطبيقات المذكورة.
@@ -805,9 +750,6 @@ Apps & Games Developer">
         
         // إعداد معالج النموذج
         setupForm();
-        
-        // تحديث حقول الرد التلقائي بناءً على اللغة
-        updateAutoResponseFields();
     });
 
     function setLanguage(selectedLang) {
@@ -832,24 +774,6 @@ Apps & Games Developer">
         
         // تحديث حقل اللغة المخفي في النموذج
         document.getElementById('formLanguage').value = selectedLang;
-        
-        // تحديث حقول الرد التلقائي
-        updateAutoResponseFields();
-    }
-
-    function updateAutoResponseFields() {
-        const lang = document.getElementById('formLanguage').value;
-        const emailField = document.getElementById('email');
-        
-        if (emailField && emailField.value) {
-            document.getElementById('replyToField').value = emailField.value;
-            
-            if (lang === 'ar') {
-                document.getElementById('autoResponseField').value = document.getElementById('autoResponseAr').value;
-            } else {
-                document.getElementById('autoResponseField').value = document.getElementById('autoResponseEn').value;
-            }
-        }
     }
 
     function setupForm() {
@@ -857,66 +781,11 @@ Apps & Games Developer">
         const submitBtn = document.getElementById('submitBtn');
         const successAlert = document.getElementById('successAlert');
         const errorAlert = document.getElementById('errorAlert');
-        const emailField = document.getElementById('email');
-        const nameField = document.getElementById('name');
         
         if(!form) return;
         
-        // تحديث حقول الرد التلقائي عند كتابة الإيميل
-        if(emailField) {
-            emailField.addEventListener('input', () => {
-                updateAutoResponseFields();
-            });
-        }
-        
-        // تحديث الرد التلقائي ليشمل اسم المستخدم
-        if(nameField) {
-            nameField.addEventListener('input', () => {
-                const name = nameField.value || 'المستخدم';
-                const lang = document.getElementById('formLanguage').value;
-                
-                let arResponse = `عزيزي/عزيزتي ${name}،
-
-شكراً لتواصلك مع أبو عرب!
-
-لقد تلقيت رسالتك بنجاح وسأرد عليك شخصياً في غضون 24-48 ساعة عمل.
-
-إذا كان استفسارك عاجلاً، يمكنك التواصل معي مباشرة عبر بوت التليجرام:
-@Abu3rab_bot
-
-يرجى التحقق من مجلد الرسائل غير المرغوب فيها (Spam) إذا لم تصلك رسالتي.
-
-مع خالص التحية،
-أبو عرب
-مطور التطبيقات والألعاب`;
-
-                let enResponse = `Dear ${name},
-
-Thank you for contacting Abu Arab!
-
-I have successfully received your message and will respond to you personally within 24-48 working hours.
-
-If your inquiry is urgent, you can contact me directly via Telegram bot:
-@Abu3rab_bot
-
-Please check your spam folder if you don't receive my email.
-
-Best regards,
-Abu Arab
-Apps & Games Developer`;
-                
-                document.getElementById('autoResponseAr').value = arResponse;
-                document.getElementById('autoResponseEn').value = enResponse;
-                
-                updateAutoResponseFields();
-            });
-        }
-        
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
-            
-            // تحديث حقول الرد التلقائي قبل الإرسال
-            updateAutoResponseFields();
             
             // إظهار حالة التحميل
             const originalText = submitBtn.innerHTML;
@@ -970,6 +839,8 @@ Apps & Games Developer`;
             }
         });
     }
+
+   
 </script>
 </body>
 </html>
